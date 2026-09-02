@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000
+Open <http://localhost:3000>
 
 ## Production
 
@@ -18,7 +18,10 @@ npm run build
 npm start
 ```
 
+For a fresh deployment, configure `DATABASE_URL` and `AUTH_SECRET` in the hosting provider's environment settings. Run `npx prisma migrate deploy` and `npm run db:seed` once against the production database before opening the site. Prisma Client is generated automatically during install.
+
 ## Included
+
 - Responsive homepage
 - Mobile navigation
 - Light/dark theme
@@ -33,9 +36,11 @@ npm start
 - SEO metadata
 
 ## Content
+
 Edit `data/posts.ts` to add or change articles.
 
 ## Next recommended phase
+
 Connect PostgreSQL and an admin dashboard so articles can be created from the browser instead of editing TypeScript files.
 
 ## PostgreSQL database
