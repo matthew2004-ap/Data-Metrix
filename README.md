@@ -18,7 +18,7 @@ npm run build
 npm start
 ```
 
-For a fresh deployment, configure `DATABASE_URL` and `AUTH_SECRET` in the hosting provider's environment settings. Run `npx prisma migrate deploy` and `npm run db:seed` once against the production database before opening the site. Prisma Client is generated automatically during install.
+For a fresh deployment, configure `DATABASE_URL`, `AUTH_SECRET`, `ADMIN_EMAIL`, and `ADMIN_PASSWORD` in the hosting provider's environment settings. Run `npx prisma migrate deploy` and `npm run db:seed` once against the production database before opening the site. To change an existing admin password, run `npm run db:set-password` locally with the production `DATABASE_URL`. Prisma Client is generated automatically during install.
 
 ## Included
 

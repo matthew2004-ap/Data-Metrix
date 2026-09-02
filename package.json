@@ -11,6 +11,7 @@
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",
     "db:seed": "prisma db seed",
+    "db:set-password": "tsx scripts/set-admin-password.ts",
     "db:test": "tsx scripts/test-database.ts",
     "db:studio": "prisma studio"
   },

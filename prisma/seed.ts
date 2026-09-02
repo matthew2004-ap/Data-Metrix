@@ -2,6 +2,7 @@ import "dotenv/config";
 import { PrismaPg } from "@prisma/adapter-pg";
 import { PrismaClient } from "../app/generated/prisma/client";
 import { posts } from "../data/posts";
+import bcrypt from "bcryptjs";
 
 const connectionString = process.env.DATABASE_URL;
 if (!connectionString) {
@@ -21,11 +22,24 @@ const slugify = (value: string) =>
 async function main() {
   const adminEmail = process.env.ADMIN_EMAIL || "admin@example.com";
   const adminName = process.env.ADMIN_NAME || "Adewale Matthew";
+  const adminPassword = process.env.ADMIN_PASSWORD;
+  const passwordHash = adminPassword
+    ? await bcrypt.hash(adminPassword, 12)
+    : undefined;
 
   const admin = await prisma.user.upsert({
     where: { email: adminEmail },
-    update: { name: adminName, role: "ADMIN" },
-    create: { email: adminEmail, name: adminName, role: "ADMIN" },
+    update: {
+      name: adminName,
+      role: "ADMIN",
+      ...(passwordHash ? { passwordHash } : {}),
+    },
+    create: {
+      email: adminEmail,
+      name: adminName,
+      role: "ADMIN",
+      passwordHash,
+    },
   });
 
   const categoryNames = [...new Set(posts.map((post) => post.category))];
