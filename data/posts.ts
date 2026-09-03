@@ -12,6 +12,34 @@ export type BlogPost = {
 
 export const posts: BlogPost[] = [
   {
+    slug: "understanding-apis",
+    title: "Understanding APIs: How Applications Talk to Each Other",
+    excerpt: "A beginner-friendly introduction to APIs, why they matter, and how they power modern software.",
+    category: "API",
+    date: "September 3, 2026",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1400&q=85",
+    featured: true,
+    content: [
+      "## What is an API?",
+      "An API, or Application Programming Interface, is a set of rules that allows one software system to communicate with another. Think of it as a contract: one application asks for data or an action, and another application responds in a predictable way.",
+      "## Why APIs matter",
+      "APIs are the foundation of modern digital experiences. When you log in to a website, make an online payment, check the weather, or load a map, you are often interacting with an API behind the scenes. They allow different systems to work together without exposing internal logic or code.",
+      "## A simple example",
+      "Imagine a mobile app that needs the latest product list. Instead of storing all product information on the phone, the app sends a request to a server. The server checks the database, builds a response, and returns the data in a format such as JSON. The app then displays it to the user.",
+      "## REST and JSON",
+      "One of the most common API styles is REST. REST APIs use standard HTTP methods such as GET, POST, PUT, and DELETE. JSON is usually the format used to send and receive data because it is lightweight and easy for both humans and applications to read.",
+      "## API design principles",
+      "A well-designed API should be clear, consistent, secure, and easy to use. It should have stable endpoints, useful error messages, and proper authentication when needed. Good design reduces confusion and makes integrations easier for developers.",
+      "## Common mistakes",
+      "Many beginner developers think an API is only about fetching data. In reality, APIs also handle user actions, updates, authentication, validation, and security. If an API is poorly designed or not protected, it can cause data leaks, bugs, and broken integrations.",
+      "## Why this matters to me",
+      "Understanding APIs has helped me connect frontend interfaces to backend systems and see how software really works in the real world. Once you understand how requests and responses move between systems, many different technologies begin to make more sense.",
+      "## Final thought",
+      "APIs are one of the most important building blocks of software today. They connect apps, services, devices, and data sources in ways that let modern products function efficiently. Learning how they work is a major step toward becoming a capable developer."
+    ],
+  },
+  {
     slug: "my-journey-into-data-analytics",
     title: "My Journey Into Data Analytics: From Curiosity to Building Real Insights",
     excerpt: "How my interest in data analytics developed and what I have learned from working with real datasets.",
