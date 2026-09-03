@@ -6,6 +6,10 @@ export const metadata: Metadata = {
   title: "DATA-METRIX | Data • Web • AI",
   description:
     "A personal publication about data analytics, web development, AI and the lessons behind building.",
+  icons: {
+    icon: "/icon.png",
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({
