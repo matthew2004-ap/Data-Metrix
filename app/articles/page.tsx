@@ -9,7 +9,7 @@ export default async function Articles() {
   const posts = await getPublishedPosts();
 
   return (
-    <div className="min-h-screen bg-white dark:bg-zinc-950">
+    <div className="site-shell min-h-screen">
       <Navbar />
       <main className="mx-auto max-w-7xl px-6 py-16 md:py-24">
         <div className="max-w-3xl">

@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { getPublishedPostBySlug } from "@/lib/posts";
 
-export const revalidate= 60;
+export const revalidate = 60;
 
 function renderContent(content: string) {
   return content.split("\n\n").map((block, index) => {
@@ -25,7 +25,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   if (!post) notFound();
 
   return (
-    <div className="min-h-screen bg-white dark:bg-zinc-950">
+    <div className="site-shell min-h-screen">
       <Navbar />
       <main className="mx-auto max-w-4xl px-6 py-16 md:py-24">
         <Link href="/articles" className="inline-flex items-center gap-2 text-sm font-bold text-blue-600 hover:underline"><ArrowLeft size={16} /> Back to articles</Link>

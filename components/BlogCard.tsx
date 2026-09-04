@@ -4,7 +4,7 @@ import type { BlogPost } from "@/data/posts";
 
 export default function BlogCard({ post }: { post: BlogPost }) {
    return (
-      <article className="group overflow-hidden rounded-3xl border border-zinc-200 bg-white transition hover:-translate-y-1 hover:shadow-xl dark:border-zinc-800 dark:bg-zinc-900">
+      <article className="site-surface group overflow-hidden rounded-3xl border border-zinc-200 transition hover:-translate-y-1 hover:shadow-xl dark:border-zinc-800">
          <Link href={`/blog/${post.slug}`}>
             <div className="relative h-52 overflow-hidden bg-zinc-100 dark:bg-zinc-800">
                <img
